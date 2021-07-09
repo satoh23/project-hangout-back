@@ -163,6 +163,7 @@ REST_USE_JWT = True
 JWT_AUTH_COOKIE = 'access'
 JWT_AUTH_REFRESH_COOKIE = 'refresh'
 JWT_AUTH_HTTPONLY = True
+JWT_AUTH_SECURE = True
 REST_AUTH_SERIALIZERS = {
     'USER_DETAILS_SERIALIZER': 'accounts.serializers.UserSerializer'
 }
@@ -195,3 +196,8 @@ REST_FRAMEWORK = {
 # stripe設定
 STRIPE_SECRET_KEY = config('stripe_secret')
 STRIPE_PUBLISHABLE_KEY = config('stripe_public')
+
+# セキュリティ
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True

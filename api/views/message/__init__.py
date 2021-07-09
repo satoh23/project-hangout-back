@@ -1,0 +1,3 @@
+from .create_message_from_male import CreateMessageFromMaleView
+from .create_message_from_female import CreateMessageFromFemaleView
+from .list_message_box import ListMessageBoxView

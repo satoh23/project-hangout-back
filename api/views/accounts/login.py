@@ -16,7 +16,7 @@ from accounts.models import CustomUser, State
 from accounts.serializers import CustomLoginSerializer
 import datetime
 
-# LOGGINGIN_STATE = State.objects.get(pk=1)
+LOGGINGIN_STATE = State.objects.get(pk=1)
 
 
 def set_gender_cookies(response):
@@ -59,10 +59,10 @@ class LoginView(GenericAPIView):
     token_model = TokenModel
     throttle_scope = 'dj_rest_auth'
 
-    # def change_state(self, response):
-    #     user = CustomUser.objects.get(pk=response.data['user']['id'])
-    #     user.state_id = LOGGINGIN_STATE
-    #     user.save()
+    def change_state(self, response):
+        user = CustomUser.objects.get(pk=response.data['user']['id'])
+        user.state_id = LOGGINGIN_STATE
+        user.save()
 
     @sensitive_post_parameters_m
     def dispatch(self, *args, **kwargs):

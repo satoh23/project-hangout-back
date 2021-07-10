@@ -176,7 +176,7 @@ REST_AUTH_SERIALIZERS = {
     'USER_DETAILS_SERIALIZER': 'accounts.serializers.UserSerializer'
 }
 
-# simple_jwt設定。refreshtokenをブラックリストに入れる設定をあとで追加する。
+# simple_jwt設定
 key = RSA.generate(2048)
 PRIVATE_KEY = key.export_key()
 PUBLIC_KEY = key.publickey().export_key()
@@ -205,7 +205,3 @@ REST_FRAMEWORK = {
 STRIPE_SECRET_KEY = config('stripe_secret')
 STRIPE_PUBLISHABLE_KEY = config('stripe_public')
 
-# セキュリティ
-SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True

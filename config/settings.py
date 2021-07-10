@@ -144,7 +144,7 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 
 # cors設定
 CORS_ALLOWED_ORIGINS = (
-    'https://project-hangout.vercel.app',
+    'https://project-hangout.vercel.app/',
 )
 CORS_ALLOW_CREDENTIALS = True
 

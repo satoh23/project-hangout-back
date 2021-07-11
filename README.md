@@ -9,5 +9,3 @@ sendgridとかcorsとかstripeの本番環境申請とかセキュリティ関�
 hangoutのHttpサーバー(restAPI)
 
 未完成だけどもうデプロイはしない
-
-運用中のサイトは流石に公開しないけど

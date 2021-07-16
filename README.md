@@ -5,5 +5,3 @@ sendgridとかcorsとかstripeの本番環境申請とかセキュリティ関�
 ブラックリストに入ったトークンはcronて定期的に削除する
 
 hangoutのHttpサーバー(restAPI)
-
-未完成だけどもうデプロイはしない
